@@ -54,6 +54,7 @@
             this.ProjectHistoryButton.TabIndex = 1;
             this.ProjectHistoryButton.Text = "Povijest tvrtke";
             this.ProjectHistoryButton.UseVisualStyleBackColor = true;
+            this.ProjectHistoryButton.Click += new System.EventHandler(this.ProjectHistoryButton_Click);
             // 
             // ProjectDetailsButton
             // 
@@ -64,6 +65,7 @@
             this.ProjectDetailsButton.TabIndex = 2;
             this.ProjectDetailsButton.Text = "Detalji projekata";
             this.ProjectDetailsButton.UseVisualStyleBackColor = true;
+            this.ProjectDetailsButton.Click += new System.EventHandler(this.ProjectDetailsButton_Click);
             // 
             // NewProjectButton
             // 
@@ -74,6 +76,7 @@
             this.NewProjectButton.TabIndex = 3;
             this.NewProjectButton.Text = "Dodavanje novog projekta";
             this.NewProjectButton.UseVisualStyleBackColor = true;
+            this.NewProjectButton.Click += new System.EventHandler(this.NewProjectButton_Click);
             // 
             // ProjectMenuBack
             // 

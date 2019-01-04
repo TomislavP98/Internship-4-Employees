@@ -30,8 +30,8 @@ namespace Internship_Employees.Presentation
 
         private void StartProjectButton_Click(object sender, EventArgs e)
         {
-            ProjectsMenu EmpMenu = new ProjectsMenu();
-            EmpMenu.ShowDialog();
+            ProjectsMenu ProjMenu = new ProjectsMenu();
+            ProjMenu.ShowDialog();
         }
     }
 }

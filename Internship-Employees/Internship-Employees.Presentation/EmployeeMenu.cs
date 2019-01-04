@@ -21,5 +21,23 @@ namespace Internship_Employees.Presentation
         {
             this.Close();
         }
+
+        private void EmployeeAddButton_Click(object sender, EventArgs e)
+        {
+            EmployeeAdd EmpAdd = new EmployeeAdd();
+            EmpAdd.ShowDialog();
+        }
+
+        private void EmployeeListButton_Click(object sender, EventArgs e)
+        {
+            EmployeeList EmpList = new EmployeeList();
+            EmpList.ShowDialog();
+        }
+
+        private void EmployeeDeleteButton_Click(object sender, EventArgs e)
+        {
+            EmployeeDelete EmpDel = new EmployeeDelete();
+            EmpDel.ShowDialog();
+        }
     }
 }

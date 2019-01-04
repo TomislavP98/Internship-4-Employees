@@ -55,6 +55,7 @@
             this.EmployeeListButton.TabIndex = 1;
             this.EmployeeListButton.Text = "Pregled svih zaposlenih";
             this.EmployeeListButton.UseVisualStyleBackColor = true;
+            this.EmployeeListButton.Click += new System.EventHandler(this.EmployeeListButton_Click);
             // 
             // EmployeeAddButton
             // 
@@ -65,6 +66,7 @@
             this.EmployeeAddButton.TabIndex = 2;
             this.EmployeeAddButton.Text = "Dodavanje novog zaposlenika";
             this.EmployeeAddButton.UseVisualStyleBackColor = true;
+            this.EmployeeAddButton.Click += new System.EventHandler(this.EmployeeAddButton_Click);
             // 
             // EmployeeDeleteButton
             // 
@@ -75,11 +77,12 @@
             this.EmployeeDeleteButton.TabIndex = 4;
             this.EmployeeDeleteButton.Text = "Otpustanje zaposlenika";
             this.EmployeeDeleteButton.UseVisualStyleBackColor = true;
+            this.EmployeeDeleteButton.Click += new System.EventHandler(this.EmployeeDeleteButton_Click);
             // 
             // EmployeeMenuBackButton
             // 
             this.EmployeeMenuBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeMenuBackButton.Location = new System.Drawing.Point(368, 488);
+            this.EmployeeMenuBackButton.Location = new System.Drawing.Point(360, 488);
             this.EmployeeMenuBackButton.Name = "EmployeeMenuBackButton";
             this.EmployeeMenuBackButton.Size = new System.Drawing.Size(162, 45);
             this.EmployeeMenuBackButton.TabIndex = 5;
