@@ -169,6 +169,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Internship-Employees.Data\Internship-Employees.Data.csproj">
+      <Project>{7dbf784f-f245-46d5-8574-2392b01be6ad}</Project>
+      <Name>Internship-Employees.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Internship-Employees.Domain\Internship-Employees.Domain.csproj">
       <Project>{849893b1-7d75-4d16-98ad-68fc40d0e552}</Project>
       <Name>Internship-Employees.Domain</Name>

@@ -145,7 +145,7 @@
             "DUMP Internship"});
             this.EmployeeAddCheckedListBox.Location = new System.Drawing.Point(312, 431);
             this.EmployeeAddCheckedListBox.Name = "EmployeeAddCheckedListBox";
-            this.EmployeeAddCheckedListBox.Size = new System.Drawing.Size(319, 214);
+            this.EmployeeAddCheckedListBox.Size = new System.Drawing.Size(319, 204);
             this.EmployeeAddCheckedListBox.TabIndex = 10;
             // 
             // EmployeAddBackButton
@@ -168,6 +168,7 @@
             this.EmployeeAddAddButton.TabIndex = 12;
             this.EmployeeAddAddButton.Text = "Dodaj";
             this.EmployeeAddAddButton.UseVisualStyleBackColor = true;
+            this.EmployeeAddAddButton.Click += new System.EventHandler(this.EmployeeAddAddButton_Click);
             // 
             // EmployeeAdd
             // 

@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Internship-Employees-Items.cs" />
+    <Compile Include="Enums\CompanyPositions.cs" />
+    <Compile Include="Models\EmployeeOnProject.cs" />
+    <Compile Include="Models\Employees.cs" />
+    <Compile Include="Models\Projects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

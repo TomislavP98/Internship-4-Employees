@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\EmployeesList.cs" />
+    <Compile Include="Repositories\EmployeesOnProject.cs" />
+    <Compile Include="Repositories\ProjectList.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Internship-Employees.Data\Internship-Employees.Data.csproj">

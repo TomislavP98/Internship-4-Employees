@@ -5,39 +5,51 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Internship_Employees.Domain.Repositories
 {
-    public class EmployeesList
+    public static class EmployeesList
     {
-        public List<Internship_Employees_Items> ListOfEmployees;
+        public static List<Employees> ListOfEmployees = new List<Employees>()
+        {
+            new Employees("Ante","Antic",DateTime.Now.Subtract(new TimeSpan(366*20, 0, 0, 0)), "99999")
+        };
+        
 
-        public List<Internship_Employees_Items> GetAllEmployees()
+
+        public static List<Employees> GetAllEmployees()
         {
             return ListOfEmployees;
         }
 
-        public bool DeleteEmployee(Internship_Employees_Items EmployeeToBeFound)
-        {
-            int Checker = 0;
-            Internship_Employees_Items EmployeeToBeDeleted = null;
-            foreach (var Internship_Employees_Items in GetAllEmployees())
-            {
-                if (Internship_Employees_Items.Name == EmployeeToBeFound.Name && Internship_Employees_Items.Surname == EmployeeToBeFound.Surname)
-                {
-                    EmployeeToBeDeleted = Internship_Employees_Items;
-                    Checker++;
-                    ListOfEmployees.Remove(EmployeeToBeDeleted);
-                }
-            }
 
-            if (Checker == 1)
+        public static Employees FindEmployeeByOIB(string oib)
+        {
+            foreach (var Employee in ListOfEmployees)
             {
-                return true;
+                if (Employee.OIB == oib)
+                    return Employee;
             }
-            else
-            {
-                return false;
-            }
+            return null;
         }
+
+        public static void EmployeeDelete(Employees EmployeeToBeRemoved)
+        {
+            ListOfEmployees.Remove(EmployeeToBeRemoved);
+        }
+
+        public static bool AddEmployee(string name, string surname, DateTime birthday, string oib)
+        {
+            foreach (var Employee in ListOfEmployees)
+            {
+                if (Employee.OIB == oib)
+                    return false;
+            }
+            var NewEmployee = new Employees(name, surname, birthday, oib);
+            ListOfEmployees.Add(NewEmployee);
+            return true;
+        }
+
+        
     }
 }
