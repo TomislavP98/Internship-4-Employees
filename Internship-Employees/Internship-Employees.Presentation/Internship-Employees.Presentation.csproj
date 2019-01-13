@@ -45,29 +45,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEmployeeWorkHours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmployeeWorkHours.Designer.cs">
+      <DependentUpon>AddEmployeeWorkHours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProjectWorkHours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProjectWorkHours.Designer.cs">
+      <DependentUpon>AddProjectWorkHours.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeeAdd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EmployeeAdd.Designer.cs">
       <DependentUpon>EmployeeAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeDelete.cs">
+    <Compile Include="EmployeeDeleteError.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmployeeDelete.Designer.cs">
-      <DependentUpon>EmployeeDelete.cs</DependentUpon>
+    <Compile Include="EmployeeDeleteError.Designer.cs">
+      <DependentUpon>EmployeeDeleteError.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeList.cs">
+    <Compile Include="EmployeeLists.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmployeeList.Designer.cs">
-      <DependentUpon>EmployeeList.cs</DependentUpon>
+    <Compile Include="EmployeeLists.Designer.cs">
+      <DependentUpon>EmployeeLists.cs</DependentUpon>
     </Compile>
     <Compile Include="EmployeeMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EmployeeMenu.Designer.cs">
       <DependentUpon>EmployeeMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeStatsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeStatsList.Designer.cs">
+      <DependentUpon>EmployeeStatsList.cs</DependentUpon>
     </Compile>
     <Compile Include="FoundProjectDetails.cs">
       <SubType>Form</SubType>
@@ -82,12 +100,6 @@
     <Compile Include="ProjectAdd.Designer.cs">
       <DependentUpon>ProjectAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProjectAddEmployee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProjectAddEmployee.Designer.cs">
-      <DependentUpon>ProjectAddEmployee.cs</DependentUpon>
-    </Compile>
     <Compile Include="ProjectDetailsSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +111,18 @@
     </Compile>
     <Compile Include="ProjectHistory.Designer.cs">
       <DependentUpon>ProjectHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectLists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectLists.Designer.cs">
+      <DependentUpon>ProjectLists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectsDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectsDetail.Designer.cs">
+      <DependentUpon>ProjectsDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="ProjectsMenu.cs">
       <SubType>Form</SubType>
@@ -113,17 +137,26 @@
     <Compile Include="Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddEmployeeWorkHours.resx">
+      <DependentUpon>AddEmployeeWorkHours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProjectWorkHours.resx">
+      <DependentUpon>AddProjectWorkHours.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeAdd.resx">
       <DependentUpon>EmployeeAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeDelete.resx">
-      <DependentUpon>EmployeeDelete.cs</DependentUpon>
+    <EmbeddedResource Include="EmployeeDeleteError.resx">
+      <DependentUpon>EmployeeDeleteError.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeList.resx">
-      <DependentUpon>EmployeeList.cs</DependentUpon>
+    <EmbeddedResource Include="EmployeeLists.resx">
+      <DependentUpon>EmployeeLists.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeMenu.resx">
       <DependentUpon>EmployeeMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeStatsList.resx">
+      <DependentUpon>EmployeeStatsList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FoundProjectDetails.resx">
       <DependentUpon>FoundProjectDetails.cs</DependentUpon>
@@ -131,14 +164,17 @@
     <EmbeddedResource Include="ProjectAdd.resx">
       <DependentUpon>ProjectAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProjectAddEmployee.resx">
-      <DependentUpon>ProjectAddEmployee.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ProjectDetailsSearch.resx">
       <DependentUpon>ProjectDetailsSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProjectHistory.resx">
       <DependentUpon>ProjectHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectLists.resx">
+      <DependentUpon>ProjectLists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectsDetail.resx">
+      <DependentUpon>ProjectsDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProjectsMenu.resx">
       <DependentUpon>ProjectsMenu.cs</DependentUpon>

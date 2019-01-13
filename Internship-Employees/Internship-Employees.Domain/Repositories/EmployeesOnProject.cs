@@ -7,7 +7,7 @@ using Internship_Employees.Data.Models;
 
 namespace Internship_Employees.Domain.Repositories
 {
-    class EmployeesOnProject
+    public static class EmployeesOnProject
     {
         private static readonly List<EmployeeOnProject> AllParticipants = new List<EmployeeOnProject>()
         {

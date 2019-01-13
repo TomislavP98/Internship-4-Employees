@@ -14,7 +14,7 @@ namespace Internship_Employees.Domain.Repositories
                         new Projects("Skype That Acutually Works", DateTime.Now, DateTime.Now.AddDays(25))
                  };
 
-        public static List<Projects> GetAllProjects()
+        public static List<Projects> AquireProjects()
         {
             return ListOfProjects;
         }

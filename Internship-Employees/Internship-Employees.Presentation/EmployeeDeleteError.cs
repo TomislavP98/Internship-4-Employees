@@ -7,24 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Internship_Employees.Data.Models;
-using Internship_Employees.Domain.Repositories;
 
 namespace Internship_Employees.Presentation
 {
-    public partial class EmployeeList : Form
+    public partial class EmployeeDeleteError : Form
     {
-       
-        public EmployeeList()
+        public EmployeeDeleteError()
         {
             InitializeComponent();
-           
         }
-        
-       
-      
 
-        private void EmployeListBasckButton_Click(object sender, EventArgs e)
+        private void ErrorOkButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }

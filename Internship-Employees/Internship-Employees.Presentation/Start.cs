@@ -19,7 +19,7 @@ namespace Internship_Employees.Presentation
 
         private void StartEmployeesButton_Click(object sender, EventArgs e)
         {
-            EmployeeMenu EmpMenu = new EmployeeMenu();
+            EmployeeStatsList EmpMenu = new EmployeeStatsList();
             EmpMenu.ShowDialog();
         }
 
@@ -30,7 +30,7 @@ namespace Internship_Employees.Presentation
 
         private void StartProjectButton_Click(object sender, EventArgs e)
         {
-            ProjectsMenu ProjMenu = new ProjectsMenu();
+            ProjectLists ProjMenu = new ProjectLists();
             ProjMenu.ShowDialog();
         }
     }

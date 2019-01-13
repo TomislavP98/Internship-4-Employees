@@ -32,12 +32,12 @@
             this.ProjectAddName = new System.Windows.Forms.Label();
             this.ProjectAddStart = new System.Windows.Forms.Label();
             this.ProjectAddFinish = new System.Windows.Forms.Label();
-            this.ProjectAddEmployeeAddButton = new System.Windows.Forms.Button();
             this.ProjectAddBackBttton = new System.Windows.Forms.Button();
             this.ProjectAddDateTimeStart = new System.Windows.Forms.DateTimePicker();
             this.ProjectAddDateTimeFinisch = new System.Windows.Forms.DateTimePicker();
             this.ProjectAddNameTextBox = new System.Windows.Forms.TextBox();
             this.ProjectAddSaveButton = new System.Windows.Forms.Button();
+            this.ProjectAddcheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // ProjectAddTitle
@@ -54,7 +54,7 @@
             // 
             this.ProjectAddName.AutoSize = true;
             this.ProjectAddName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProjectAddName.Location = new System.Drawing.Point(118, 201);
+            this.ProjectAddName.Location = new System.Drawing.Point(103, 152);
             this.ProjectAddName.Name = "ProjectAddName";
             this.ProjectAddName.Size = new System.Drawing.Size(129, 25);
             this.ProjectAddName.TabIndex = 1;
@@ -65,7 +65,7 @@
             // 
             this.ProjectAddStart.AutoSize = true;
             this.ProjectAddStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProjectAddStart.Location = new System.Drawing.Point(119, 265);
+            this.ProjectAddStart.Location = new System.Drawing.Point(103, 211);
             this.ProjectAddStart.Name = "ProjectAddStart";
             this.ProjectAddStart.Size = new System.Drawing.Size(149, 25);
             this.ProjectAddStart.TabIndex = 2;
@@ -75,27 +75,16 @@
             // 
             this.ProjectAddFinish.AutoSize = true;
             this.ProjectAddFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProjectAddFinish.Location = new System.Drawing.Point(119, 328);
+            this.ProjectAddFinish.Location = new System.Drawing.Point(103, 295);
             this.ProjectAddFinish.Name = "ProjectAddFinish";
             this.ProjectAddFinish.Size = new System.Drawing.Size(164, 25);
             this.ProjectAddFinish.TabIndex = 3;
             this.ProjectAddFinish.Text = "Datum završetka:";
             // 
-            // ProjectAddEmployeeAddButton
-            // 
-            this.ProjectAddEmployeeAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProjectAddEmployeeAddButton.Location = new System.Drawing.Point(186, 423);
-            this.ProjectAddEmployeeAddButton.Name = "ProjectAddEmployeeAddButton";
-            this.ProjectAddEmployeeAddButton.Size = new System.Drawing.Size(244, 51);
-            this.ProjectAddEmployeeAddButton.TabIndex = 4;
-            this.ProjectAddEmployeeAddButton.Text = "Dodaj sudionika";
-            this.ProjectAddEmployeeAddButton.UseVisualStyleBackColor = true;
-            this.ProjectAddEmployeeAddButton.Click += new System.EventHandler(this.ProjectAddEmployeeAddButton_Click);
-            // 
             // ProjectAddBackBttton
             // 
             this.ProjectAddBackBttton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProjectAddBackBttton.Location = new System.Drawing.Point(148, 550);
+            this.ProjectAddBackBttton.Location = new System.Drawing.Point(148, 656);
             this.ProjectAddBackBttton.Name = "ProjectAddBackBttton";
             this.ProjectAddBackBttton.Size = new System.Drawing.Size(135, 50);
             this.ProjectAddBackBttton.TabIndex = 5;
@@ -106,7 +95,7 @@
             // ProjectAddDateTimeStart
             // 
             this.ProjectAddDateTimeStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProjectAddDateTimeStart.Location = new System.Drawing.Point(162, 293);
+            this.ProjectAddDateTimeStart.Location = new System.Drawing.Point(158, 255);
             this.ProjectAddDateTimeStart.Name = "ProjectAddDateTimeStart";
             this.ProjectAddDateTimeStart.Size = new System.Drawing.Size(323, 28);
             this.ProjectAddDateTimeStart.TabIndex = 6;
@@ -114,7 +103,7 @@
             // ProjectAddDateTimeFinisch
             // 
             this.ProjectAddDateTimeFinisch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProjectAddDateTimeFinisch.Location = new System.Drawing.Point(162, 356);
+            this.ProjectAddDateTimeFinisch.Location = new System.Drawing.Point(158, 340);
             this.ProjectAddDateTimeFinisch.Name = "ProjectAddDateTimeFinisch";
             this.ProjectAddDateTimeFinisch.Size = new System.Drawing.Size(323, 28);
             this.ProjectAddDateTimeFinisch.TabIndex = 7;
@@ -122,7 +111,7 @@
             // ProjectAddNameTextBox
             // 
             this.ProjectAddNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProjectAddNameTextBox.Location = new System.Drawing.Point(158, 236);
+            this.ProjectAddNameTextBox.Location = new System.Drawing.Point(158, 180);
             this.ProjectAddNameTextBox.Name = "ProjectAddNameTextBox";
             this.ProjectAddNameTextBox.Size = new System.Drawing.Size(327, 28);
             this.ProjectAddNameTextBox.TabIndex = 8;
@@ -130,24 +119,33 @@
             // ProjectAddSaveButton
             // 
             this.ProjectAddSaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProjectAddSaveButton.Location = new System.Drawing.Point(355, 550);
+            this.ProjectAddSaveButton.Location = new System.Drawing.Point(355, 656);
             this.ProjectAddSaveButton.Name = "ProjectAddSaveButton";
             this.ProjectAddSaveButton.Size = new System.Drawing.Size(130, 50);
             this.ProjectAddSaveButton.TabIndex = 9;
             this.ProjectAddSaveButton.Text = "Spremi";
             this.ProjectAddSaveButton.UseVisualStyleBackColor = true;
+            this.ProjectAddSaveButton.Click += new System.EventHandler(this.ProjectAddSaveButton_Click);
+            // 
+            // ProjectAddcheckedListBox
+            // 
+            this.ProjectAddcheckedListBox.FormattingEnabled = true;
+            this.ProjectAddcheckedListBox.Location = new System.Drawing.Point(52, 391);
+            this.ProjectAddcheckedListBox.Name = "ProjectAddcheckedListBox";
+            this.ProjectAddcheckedListBox.Size = new System.Drawing.Size(518, 235);
+            this.ProjectAddcheckedListBox.TabIndex = 10;
             // 
             // ProjectAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 718);
+            this.Controls.Add(this.ProjectAddcheckedListBox);
             this.Controls.Add(this.ProjectAddSaveButton);
             this.Controls.Add(this.ProjectAddNameTextBox);
             this.Controls.Add(this.ProjectAddDateTimeFinisch);
             this.Controls.Add(this.ProjectAddDateTimeStart);
             this.Controls.Add(this.ProjectAddBackBttton);
-            this.Controls.Add(this.ProjectAddEmployeeAddButton);
             this.Controls.Add(this.ProjectAddFinish);
             this.Controls.Add(this.ProjectAddStart);
             this.Controls.Add(this.ProjectAddName);
@@ -165,11 +163,11 @@
         private System.Windows.Forms.Label ProjectAddName;
         private System.Windows.Forms.Label ProjectAddStart;
         private System.Windows.Forms.Label ProjectAddFinish;
-        private System.Windows.Forms.Button ProjectAddEmployeeAddButton;
         private System.Windows.Forms.Button ProjectAddBackBttton;
         private System.Windows.Forms.DateTimePicker ProjectAddDateTimeStart;
         private System.Windows.Forms.DateTimePicker ProjectAddDateTimeFinisch;
         private System.Windows.Forms.TextBox ProjectAddNameTextBox;
         private System.Windows.Forms.Button ProjectAddSaveButton;
+        private System.Windows.Forms.CheckedListBox ProjectAddcheckedListBox;
     }
 }

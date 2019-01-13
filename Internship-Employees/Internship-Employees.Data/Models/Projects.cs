@@ -19,6 +19,15 @@ namespace Internship_Employees.Data.Models
             ProjectFinish = projectfinish;
         }
 
+        public bool Started()
+        {
+            return ProjectStart.Date <= DateTime.Now.Date;
+        }
+
+        public bool Finished()
+        {
+            return ProjectFinish.Date <= DateTime.Now.Date;
+        }
 
         public override string ToString()
         {

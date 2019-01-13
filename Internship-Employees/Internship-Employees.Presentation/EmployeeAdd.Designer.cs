@@ -33,14 +33,16 @@
             this.EmployeeAddSurname = new System.Windows.Forms.Label();
             this.EmployeeAddOIB = new System.Windows.Forms.Label();
             this.EmployeeAddBirthDate = new System.Windows.Forms.Label();
-            this.EmployeeAddRank = new System.Windows.Forms.Label();
             this.EmployeAddNameTextbox = new System.Windows.Forms.TextBox();
             this.EmployeeAddSurnameTextbox = new System.Windows.Forms.TextBox();
             this.EmployeeAddOIBTextbox = new System.Windows.Forms.TextBox();
             this.EmployeeAddDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.EmployeeAddCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.EmployeAddBackButton = new System.Windows.Forms.Button();
             this.EmployeeAddAddButton = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.EmployeeAddRank = new System.Windows.Forms.Label();
+            this.EmployeeAddcomboBox = new System.Windows.Forms.ComboBox();
+            this.EmployeePositioncheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // EmployeeAddTitle
@@ -49,9 +51,9 @@
             this.EmployeeAddTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeeAddTitle.Location = new System.Drawing.Point(326, 45);
             this.EmployeeAddTitle.Name = "EmployeeAddTitle";
-            this.EmployeeAddTitle.Size = new System.Drawing.Size(305, 37);
+            this.EmployeeAddTitle.Size = new System.Drawing.Size(466, 37);
             this.EmployeeAddTitle.TabIndex = 0;
-            this.EmployeeAddTitle.Text = "Dodavanje korisnika";
+            this.EmployeeAddTitle.Text = "Dodavanje/Uređivanje korisnika";
             // 
             // EmployeeAddName
             // 
@@ -93,16 +95,6 @@
             this.EmployeeAddBirthDate.TabIndex = 4;
             this.EmployeeAddBirthDate.Text = "Datum rođenja:";
             // 
-            // EmployeeAddRank
-            // 
-            this.EmployeeAddRank.AutoSize = true;
-            this.EmployeeAddRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeAddRank.Location = new System.Drawing.Point(149, 364);
-            this.EmployeeAddRank.Name = "EmployeeAddRank";
-            this.EmployeeAddRank.Size = new System.Drawing.Size(85, 25);
-            this.EmployeeAddRank.TabIndex = 5;
-            this.EmployeeAddRank.Text = "Pozicija:";
-            // 
             // EmployeAddNameTextbox
             // 
             this.EmployeAddNameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -135,19 +127,6 @@
             this.EmployeeAddDateTimePicker.Size = new System.Drawing.Size(323, 26);
             this.EmployeeAddDateTimePicker.TabIndex = 9;
             // 
-            // EmployeeAddCheckedListBox
-            // 
-            this.EmployeeAddCheckedListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeAddCheckedListBox.FormattingEnabled = true;
-            this.EmployeeAddCheckedListBox.Items.AddRange(new object[] {
-            "DUMP Days",
-            "Sveučilište natječaji",
-            "DUMP Internship"});
-            this.EmployeeAddCheckedListBox.Location = new System.Drawing.Point(312, 431);
-            this.EmployeeAddCheckedListBox.Name = "EmployeeAddCheckedListBox";
-            this.EmployeeAddCheckedListBox.Size = new System.Drawing.Size(319, 204);
-            this.EmployeeAddCheckedListBox.TabIndex = 10;
-            // 
             // EmployeAddBackButton
             // 
             this.EmployeAddBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -170,14 +149,52 @@
             this.EmployeeAddAddButton.UseVisualStyleBackColor = true;
             this.EmployeeAddAddButton.Click += new System.EventHandler(this.EmployeeAddAddButton_Click);
             // 
+            // EmployeeAddRank
+            // 
+            this.EmployeeAddRank.AutoSize = true;
+            this.EmployeeAddRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeAddRank.Location = new System.Drawing.Point(148, 375);
+            this.EmployeeAddRank.Name = "EmployeeAddRank";
+            this.EmployeeAddRank.Size = new System.Drawing.Size(85, 25);
+            this.EmployeeAddRank.TabIndex = 5;
+            this.EmployeeAddRank.Text = "Pozicija:";
+            // 
+            // EmployeeAddcomboBox
+            // 
+            this.EmployeeAddcomboBox.FormattingEnabled = true;
+            this.EmployeeAddcomboBox.Items.AddRange(new object[] {
+            "Develope",
+            "Dizajner",
+            "Računovođa",
+            "ProjektMenadžer,",
+            "Pripravnik"});
+            this.EmployeeAddcomboBox.Location = new System.Drawing.Point(312, 375);
+            this.EmployeeAddcomboBox.Name = "EmployeeAddcomboBox";
+            this.EmployeeAddcomboBox.Size = new System.Drawing.Size(328, 28);
+            this.EmployeeAddcomboBox.TabIndex = 13;
+            // 
+            // EmployeePositioncheckedListBox
+            // 
+            this.EmployeePositioncheckedListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeePositioncheckedListBox.FormattingEnabled = true;
+            this.EmployeePositioncheckedListBox.Items.AddRange(new object[] {
+            "DUMP Internship",
+            "Sveučilište Natječaji",
+            "DUMP Days"});
+            this.EmployeePositioncheckedListBox.Location = new System.Drawing.Point(264, 451);
+            this.EmployeePositioncheckedListBox.Name = "EmployeePositioncheckedListBox";
+            this.EmployeePositioncheckedListBox.Size = new System.Drawing.Size(393, 193);
+            this.EmployeePositioncheckedListBox.TabIndex = 14;
+            // 
             // EmployeeAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(992, 740);
+            this.Controls.Add(this.EmployeePositioncheckedListBox);
+            this.Controls.Add(this.EmployeeAddcomboBox);
             this.Controls.Add(this.EmployeeAddAddButton);
             this.Controls.Add(this.EmployeAddBackButton);
-            this.Controls.Add(this.EmployeeAddCheckedListBox);
             this.Controls.Add(this.EmployeeAddDateTimePicker);
             this.Controls.Add(this.EmployeeAddOIBTextbox);
             this.Controls.Add(this.EmployeeAddSurnameTextbox);
@@ -202,13 +219,15 @@
         private System.Windows.Forms.Label EmployeeAddSurname;
         private System.Windows.Forms.Label EmployeeAddOIB;
         private System.Windows.Forms.Label EmployeeAddBirthDate;
-        private System.Windows.Forms.Label EmployeeAddRank;
         private System.Windows.Forms.TextBox EmployeAddNameTextbox;
         private System.Windows.Forms.TextBox EmployeeAddSurnameTextbox;
         private System.Windows.Forms.TextBox EmployeeAddOIBTextbox;
         private System.Windows.Forms.DateTimePicker EmployeeAddDateTimePicker;
-        private System.Windows.Forms.CheckedListBox EmployeeAddCheckedListBox;
         private System.Windows.Forms.Button EmployeAddBackButton;
         private System.Windows.Forms.Button EmployeeAddAddButton;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label EmployeeAddRank;
+        private System.Windows.Forms.ComboBox EmployeeAddcomboBox;
+        private System.Windows.Forms.CheckedListBox EmployeePositioncheckedListBox;
     }
 }
