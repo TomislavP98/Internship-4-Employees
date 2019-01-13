@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.EmployeeMenuTitle = new System.Windows.Forms.Label();
-            this.EmployeeListEditButton = new System.Windows.Forms.Button();
             this.EmployeeAddButton = new System.Windows.Forms.Button();
             this.EmployeeDeleteButton = new System.Windows.Forms.Button();
             this.EmployeeMenuBackButton = new System.Windows.Forms.Button();
@@ -47,21 +46,10 @@
             this.EmployeeMenuTitle.TabIndex = 0;
             this.EmployeeMenuTitle.Text = "Nešto d.o.o. - Zaposlenici";
             // 
-            // EmployeeListEditButton
-            // 
-            this.EmployeeListEditButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeListEditButton.Location = new System.Drawing.Point(217, 486);
-            this.EmployeeListEditButton.Name = "EmployeeListEditButton";
-            this.EmployeeListEditButton.Size = new System.Drawing.Size(179, 51);
-            this.EmployeeListEditButton.TabIndex = 1;
-            this.EmployeeListEditButton.Text = "Uredi";
-            this.EmployeeListEditButton.UseVisualStyleBackColor = true;
-            this.EmployeeListEditButton.Click += new System.EventHandler(this.EmployeeListButton_Click);
-            // 
             // EmployeeAddButton
             // 
             this.EmployeeAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeAddButton.Location = new System.Drawing.Point(12, 479);
+            this.EmployeeAddButton.Location = new System.Drawing.Point(128, 479);
             this.EmployeeAddButton.Name = "EmployeeAddButton";
             this.EmployeeAddButton.Size = new System.Drawing.Size(185, 62);
             this.EmployeeAddButton.TabIndex = 2;
@@ -72,7 +60,7 @@
             // EmployeeDeleteButton
             // 
             this.EmployeeDeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeDeleteButton.Location = new System.Drawing.Point(418, 484);
+            this.EmployeeDeleteButton.Location = new System.Drawing.Point(341, 484);
             this.EmployeeDeleteButton.Name = "EmployeeDeleteButton";
             this.EmployeeDeleteButton.Size = new System.Drawing.Size(230, 52);
             this.EmployeeDeleteButton.TabIndex = 4;
@@ -83,7 +71,7 @@
             // EmployeeMenuBackButton
             // 
             this.EmployeeMenuBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeMenuBackButton.Location = new System.Drawing.Point(664, 486);
+            this.EmployeeMenuBackButton.Location = new System.Drawing.Point(589, 486);
             this.EmployeeMenuBackButton.Name = "EmployeeMenuBackButton";
             this.EmployeeMenuBackButton.Size = new System.Drawing.Size(165, 50);
             this.EmployeeMenuBackButton.TabIndex = 5;
@@ -108,7 +96,6 @@
             this.Controls.Add(this.EmployeeMenuBackButton);
             this.Controls.Add(this.EmployeeDeleteButton);
             this.Controls.Add(this.EmployeeAddButton);
-            this.Controls.Add(this.EmployeeListEditButton);
             this.Controls.Add(this.EmployeeMenuTitle);
             this.Name = "EmployeeMenu";
             this.Text = "EmployeeMenu";
@@ -120,7 +107,6 @@
         #endregion
 
         private System.Windows.Forms.Label EmployeeMenuTitle;
-        private System.Windows.Forms.Button EmployeeListEditButton;
         private System.Windows.Forms.Button EmployeeAddButton;
         private System.Windows.Forms.Button EmployeeDeleteButton;
         private System.Windows.Forms.Button EmployeeMenuBackButton;

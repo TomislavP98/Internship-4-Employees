@@ -52,7 +52,7 @@ namespace Internship_Employees.Presentation
 
             foreach (var Project in Projects)
             {
-                var editProject = new ProjectAdd(Project.Name, Project.ProjectStart, Project.ProjectFinish);
+                var editProject = new ProjectAdd(Project);
                 editProject.ShowDialog();
             }
             RefreshProjectsListBox();

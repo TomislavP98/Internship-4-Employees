@@ -36,16 +36,16 @@ namespace Internship_Employees.Presentation
 
         }
 
-        public ProjectAdd(string name, DateTime start, DateTime finish)
+        public ProjectAdd(Projects Edited)
         {
-            OldName = name;
+            OldName = Edited.Name;
 
             InitializeComponent();
-            ProjectAddNameTextBox.Text = name;
-            ProjectAddDateTimeStart.Value = start;
-            ProjectAddDateTimeFinisch.Value = finish;
+            ProjectAddNameTextBox.Text = Edited.Name;
+            ProjectAddDateTimeStart.Value = Edited.ProjectStart;
+            ProjectAddDateTimeFinisch.Value = Edited.ProjectFinish;
             RefreshListBox();
-            CheckEmployeesOnProject(name);
+            CheckEmployeesOnProject(Edited.Name);
         }
 
         private void CancelButton_Click(object sender, EventArgs e)

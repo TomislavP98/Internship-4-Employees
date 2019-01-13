@@ -102,8 +102,8 @@ namespace Internship_Employees.Presentation
 
         private void EmployeeListButton_Click(object sender, EventArgs e)
         {
-
-            var Employee = new List<Employees>();
+            
+           /* var Employee = new List<Employees>();
             foreach (var CheckedEmployee in EmployeeMenucheckedListBox.CheckedItems)
             {
                 Employee.Add(EmployeesList.FindEmployeeByOIB(CheckedEmployee.ToString().GetOIBInCheck()));
@@ -113,11 +113,12 @@ namespace Internship_Employees.Presentation
 
             foreach (var employee in Employee)
             {
-                var editProject = new EmployeeAdd(employee.Name, employee.Surname, employee.BirthDay, employee.OIB, employee.Rank);
+                var editProject = new EmployeeAdd(employee);
                 editProject.ShowDialog();
             }
 
-            RefreshEmployeesListBox();
+            RefreshEmployeesListBox();*/
+            
         }
 
 

@@ -50,7 +50,21 @@ namespace Internship_Employees.Infrastructure.Extensions
             var CheckedProjectName = ProjectedName.Match(Projectname).ToString().Replace(" - Start", "");
             return CheckedProjectName;
         }
+
+        public static string AllFirstLettersToUpper(this string text)
+        {
+            var newText = text.ToLower().ToCharArray();
+            for (var i = 0; i < newText.Length; i++)
+            {
+                if (i == 0)
+                    newText[i] = char.ToUpper(newText[i]);
+                if (newText[i] == ' ')
+                    newText[i + 1] = char.ToUpper(newText[i + 1]);
+            }
+            return new string(newText);
+        }
     }
+
 
 
 }

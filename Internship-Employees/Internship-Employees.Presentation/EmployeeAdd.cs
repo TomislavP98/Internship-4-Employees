@@ -41,21 +41,21 @@ namespace Internship_Employees.Presentation
             }
         }
 
-        public EmployeeAdd(string name, string surname, DateTime birthday, string oib, CompanyPositions rank)
+        public EmployeeAdd(Employees Added)
         {
-            OldOIB= oib;
+            OldOIB= Added.OIB;
             Addition = false;
 
             InitializeComponent();
-            EmployeAddNameTextbox.Text = name;
-            EmployeeAddSurnameTextbox.Text = surname;
-            EmployeeAddDateTimePicker.Value = birthday;
+            EmployeAddNameTextbox.Text = Added.Name;
+            EmployeeAddSurnameTextbox.Text = Added.Surname;
+            EmployeeAddDateTimePicker.Value = Added.BirthDay;
             EmployeeAddDateTimePicker.MaxDate = DateTime.Now.Subtract(new TimeSpan(365 * 18 + 4, 0, 0, 0));
-            EmployeeAddOIBTextbox.Text = oib;
+            EmployeeAddOIBTextbox.Text = Added.OIB;
             RefreshComboBox();
-            EmployeeAddcomboBox.Text = rank.ToString();
+            EmployeeAddcomboBox.Text = Added.Rank.ToString();
             RefreshListBox();
-            CheckProjectsDoneByEmployee(oib);
+            CheckProjectsDoneByEmployee(Added.OIB);
         }
 
         private void RefreshListBox()
@@ -84,7 +84,7 @@ namespace Internship_Employees.Presentation
             var Positions = Enum.GetNames(typeof(CompanyPositions));
             foreach (var Position in Positions)
             {
-                EmployeePositioncheckedListBox.Items.Add(Position);
+                EmployeeAddcomboBox.Items.Add(Position);
             }
         }
 
@@ -92,8 +92,8 @@ namespace Internship_Employees.Presentation
         {
             if (ErrorCheck()) return;
 
-            EmployeAddNameTextbox.Text = EmployeAddNameTextbox.Text.TrimAndRemoveWhiteSpaces().FirstLetterToUpper();
-            EmployeeAddSurnameTextbox.Text = EmployeeAddSurnameTextbox.Text.TrimAndRemoveWhiteSpaces().FirstLetterToUpper();
+            EmployeAddNameTextbox.Text = EmployeAddNameTextbox.Text.TrimAndRemoveWhiteSpaces().AllFirstLettersToUpper();
+            EmployeeAddSurnameTextbox.Text = EmployeeAddSurnameTextbox.Text.TrimAndRemoveWhiteSpaces().AllFirstLettersToUpper();
 
             var CheckedNames = new List<string>();
             foreach (var ProjectProperties in EmployeePositioncheckedListBox.CheckedItems)
@@ -115,8 +115,7 @@ namespace Internship_Employees.Presentation
 
         private void UpdateOIB()
         {
-            foreach (var relation
-                in EmployeesOnProject.GetAllRelations())
+            foreach (var relation in EmployeesOnProject.GetAllRelations())
             {
                 if (relation.OIB == OldOIB)
                 {

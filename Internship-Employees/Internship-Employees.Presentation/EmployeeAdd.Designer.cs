@@ -162,12 +162,6 @@
             // EmployeeAddcomboBox
             // 
             this.EmployeeAddcomboBox.FormattingEnabled = true;
-            this.EmployeeAddcomboBox.Items.AddRange(new object[] {
-            "Develope",
-            "Dizajner",
-            "Računovođa",
-            "ProjektMenadžer,",
-            "Pripravnik"});
             this.EmployeeAddcomboBox.Location = new System.Drawing.Point(312, 375);
             this.EmployeeAddcomboBox.Name = "EmployeeAddcomboBox";
             this.EmployeeAddcomboBox.Size = new System.Drawing.Size(328, 28);
@@ -183,7 +177,7 @@
             "DUMP Days"});
             this.EmployeePositioncheckedListBox.Location = new System.Drawing.Point(264, 451);
             this.EmployeePositioncheckedListBox.Name = "EmployeePositioncheckedListBox";
-            this.EmployeePositioncheckedListBox.Size = new System.Drawing.Size(393, 193);
+            this.EmployeePositioncheckedListBox.Size = new System.Drawing.Size(393, 179);
             this.EmployeePositioncheckedListBox.TabIndex = 14;
             // 
             // EmployeeAdd
